@@ -1,0 +1,14 @@
+services:
+    postgres:
+        image: postgres:latest
+        container_name: postgres-easy-ecommerce-container
+        environment:
+            POSTGRES_DB: easy-ecommerce
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 123
+        ports:
+            - "5432:5432"
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+volumes:
+    postgres_data:
