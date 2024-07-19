@@ -23,6 +23,7 @@
 - Swagger 2.5.0
 - Apache Maven 3.3.2
 - Spring Validation I/O
+- GIT 2.34.1
 
 <h2 id="started">🚀 Getting started</h2>
 
@@ -60,6 +61,138 @@ run: docker-compose up -d
 cd easy-ecommerce
 mvn spring-boot:run
 ```
+<h2 id="routes">📍 API Endpoints</h2>
 
-TERMINAR O README!!!!
+| route               | description                                          
+|----------------------|-----------------------------------------------------
+| <kbd>POST /users</kbd>     | create a new user [request details](#post-user-create)
+| <kbd>GET /users/{userId}</kbd>     | search for a specific user [response details](#get-user-detail)
+| <kbd>GET /users</kbd>     | search all users [response details](#get-users-details)
+| <kbd>PUT /users/{userId}</kbd>     | update data for a specific user [request details](#put-user)
+| <kbd>DELETE /users/{userId}</kbd>     | delete a specific use [request details](#delete-user)
+| <kbd>POST /products</kbd>     | create a new product [request details](#post-product-create)
+| <kbd>GET /products/{productId}</kbd>     | search for a specific product [response details](#get-product-detail)
+| <kbd>GET /products</kbd>     | search all users [response details](#get-users-details)
 
+
+<h3 id="post-user-create">POST /users</h3>
+
+**REQUEST**
+```json
+{
+  "name":"Rayan silva",
+  "email": "rayan.dev@gmail.com",
+  "phone": "(99) 9 9999-9999",
+  "password": "dev.java@"
+}
+```
+**RESPONSE**
+```json
+{
+  "user_id": 1
+}
+```
+
+<h3 id="get-user-detail">GET /users/{userId}</h3>
+
+**RESPONSE**
+```json
+{
+  "user_id": 1,
+  "name": "Rayan silva",
+  "email": "rayan.dev@gmail.com",
+  "phone": "(99) 9 9999-9999",
+  "password": "dev.java@"
+}
+```
+
+<h3 id="get-users-details">GET /users</h3>
+
+**RESPONSE**
+```json
+{
+  "user_id": 1,
+  "name": "Rayan silva",
+  "email": "rayan.dev@gmail.com",
+  "phone": "(99) 9 9999-9999",
+  "password": "dev.java@"
+}
+...
+ ...
+```
+<h3 id="put-user">PUT /users/{userId}</h3>
+
+**REQUEST**
+```json
+{
+  "name": "Rayan silva Ferreira",
+  "phone": "(55) 5 5555-4444",
+  "password":  "desenvolvedor.java.backend"
+}
+```
+**RESPONSE**
+```json
+{
+  "user_id": 1
+}
+```
+<h3 id="delete-user">DELETE /users/{userId}</h3>
+
+**REQUEST**
+```json
+http://localhost:8080/users/userId
+```
+
+<h3 id="post-product-create">POST /products</h3>
+
+**REQUEST**
+```json
+{
+  "name": "Kingston A2000 SSD 10000",
+  "brand": "Kingston",
+  "model": "A2000",
+  "description": "SSD Kingston A2000 NVMe PCIe, 250GB, até 2000MB/s de leitura.",
+  "price": 250.00,
+  "imgUrl": "http://example.com/img/kingston_a2000.jpg",
+  "categories": [
+    "Computers",
+    "Storage",
+    "Components"
+  ]
+}
+
+```
+**RESPONSE**
+```json
+{
+  "product_id": 1
+}
+```
+<h3 id="get-product-detail">GET /products/{productId}</h3>
+
+**RESPONSE**
+```json
+{
+  "productId": 1,
+  "name": "Kingston A2000 SSD 10000",
+  "brand": "Kingston",
+  "model": "A2000",
+  "description": "SSD Kingston A2000 NVMe PCIe, 250GB, até 2000MB/s de leitura.",
+  "price": 250,
+  "imgUrl": "http://example.com/img/kingston_a2000.jpg",
+  "categories": [
+    {
+      "id": 1,
+      "name": "Computers"
+    },
+    {
+      "id": 2,
+      "name": "Components"
+    },
+    {
+      "id": 3,
+      "name": "Storage"
+    }
+  ]
+}
+```
