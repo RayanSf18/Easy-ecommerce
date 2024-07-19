@@ -63,7 +63,7 @@ mvn spring-boot:run
 ```
 5. **Location of application:**
 ```
-http://localhost:8080
+http://localhost:8080/
 ```
 
 <h2 id="api-endpoints">📍 API Endpoints</h2>
