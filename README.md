@@ -60,6 +60,7 @@ docker-compose up -d
 4. **Start the Application:**
 ```
 cd easy-ecommerce
+
 mvn spring-boot:run
 ```
 5. **Location of application:**
