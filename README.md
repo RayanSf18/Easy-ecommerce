@@ -54,7 +54,8 @@ cd easy-ecommerce
 3. **Run Postgres Docker:**
 ```
 cd easy-ecommerce/local
-run: docker-compose up -d
+
+docker-compose up -d
 ```
 4. **Start the Application:**
 ```
