@@ -24,6 +24,7 @@
 - Apache Maven 3.3.2
 - Spring Validation I/O
 - GIT 2.34.1
+- ProblemDetail
 
 <h2 id="getting-started">🚀 Getting started</h2>
 
