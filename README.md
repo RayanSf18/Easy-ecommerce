@@ -61,7 +61,14 @@ run: docker-compose up -d
 cd easy-ecommerce
 mvn spring-boot:run
 ```
+5. **Location of application:**
+```
+http://localhost:8080
+```
+
 <h2 id="api-endpoints">📍 API Endpoints</h2>
+
+<p>View endpoint results in:  <a href="http://localhost:8080/swagger-ui/index.html">Swagger</a></p>
 
 | route               | description                                          
 |----------------------|-----------------------------------------------------
@@ -86,7 +93,6 @@ mvn spring-boot:run
 | <kbd>POST /orders/{orderId}/items/remove?productId={productId}</kbd>     | remove product to order [request details](#post-remove-product-to-order)
 | <kbd>POST /orders/{orderId}/payment</kbd>     | add payment to order [request details](#post-add-payment-to-order)
 | <kbd>POST /orders/{orderId}/cancel</kbd>     | delete order [request details](#delete-order)
-
 
 <H3>Endpoints: User</h3>
 <h4 id="post-user-create">POST /users</h4>
